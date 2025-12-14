@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://macnman.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -41,9 +41,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/', // ✅ IMPORTANT
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/macnman-web-test/macnman-docs/tree/main/', },
+          editUrl: 'https://github.com/macnman-web-test/macnman-docs/tree/main/',
+        },
         blog: {
           showReadingTime: true,
           feedOptions: {
